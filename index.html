@@ -21,25 +21,35 @@ table, th, td {
     <td>Linus</td>
   </tr>
   <tr>
-    <td>16</td>
-    <td>14</td>
-    <td>10</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>14</td>
-    <td>10</td>
-    <td>10</td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>14</td>
-    <td>10</td>
-    <td>10</td>
+    <td id="email">16</td>
+    <td id="tobias">14</td>
+    <td id="linus">10</td>
+    <td id="linus4">10</td>
   </tr>
 </table>
 
 </body>
+<script>
+setTimeout(() => {
+  document.getElementById("email").innerHTML = "randomstring@gmail.com";
+  document.getElementById("tobias").innerHTML = "randomstring1";
+  document.getElementById("linus").innerHTML = "randomstring2";
+  document.getElementById("linus4").innerHTML = "randomstring3";
+}, 5000);
+
+setTimeout(() => {  
+  document.getElementById("email").innerHTML = "randomstring2@gmail.com";
+  document.getElementById("tobias").innerHTML = "randomstring10";
+  document.getElementById("linus").innerHTML = "randomstring20";
+  document.getElementById("linus4").innerHTML = "randomstring30";
+}, 10000);
+
+setTimeout(() => {  
+  document.getElementById("email").innerHTML = "randomstring3@gmail.com";
+  document.getElementById("tobias").innerHTML = "randomstring50";
+  document.getElementById("linus").innerHTML = "randomstring70";
+  document.getElementById("linus4").innerHTML = "randomstring90";
+}, 20000);
+</script>
 </html>
 
