@@ -1,55 +1,46 @@
 <!DOCTYPE html>
 <html>
-<style>
-table, th, td {
-  border:1px solid black;
-}
-</style>
-<body>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <table style="width: 100%">
+      <tr>
+        <th>Person 1</th>
+        <th>Person 2</th>
+        <th>Person 3</th>
+        <th>Person 4</th>
+      </tr>
+      <tr>
+        <td>Emil</td>
+        <td>Tobias</td>
+        <td>Linus</td>
+        <td>Linus</td>
+      </tr>
+      <tr>
+        <td id="email">16</td>
+        <td id="tobias">14</td>
+        <td id="linus">10</td>
+        <td id="linus4">10</td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    var i = 0;
+    function myFunction() {
+      document.getElementById("email").innerHTML = "randomstring@gmail.com" + i;
+      document.getElementById("tobias").innerHTML = "randomstring1" + i;
+      document.getElementById("linus").innerHTML = "randomstring1" + i;
+      document.getElementById("linus4").innerHTML = "randomstring1" + i;
+    }
 
-<table style="width:100%">
-  <tr>
-    <th>Person 1</th>
-    <th>Person 2</th>
-    <th>Person 3</th>
-    <th>Person 4</th>
-  </tr>
-  <tr>
-    <td>Emil</td>
-    <td>Tobias</td>
-    <td>Linus</td>
-    <td>Linus</td>
-  </tr>
-  <tr>
-    <td id="email">16</td>
-    <td id="tobias">14</td>
-    <td id="linus">10</td>
-    <td id="linus4">10</td>
-  </tr>
-</table>
-
-</body>
-<script>
-setTimeout(() => {
-  document.getElementById("email").innerHTML = "randomstring@gmail.com";
-  document.getElementById("tobias").innerHTML = "randomstring1";
-  document.getElementById("linus").innerHTML = "randomstring2";
-  document.getElementById("linus4").innerHTML = "randomstring3";
-}, 5000);
-
-setTimeout(() => {  
-  document.getElementById("email").innerHTML = "randomstring2@gmail.com";
-  document.getElementById("tobias").innerHTML = "randomstring10";
-  document.getElementById("linus").innerHTML = "randomstring20";
-  document.getElementById("linus4").innerHTML = "randomstring30";
-}, 10000);
-
-setTimeout(() => {  
-  document.getElementById("email").innerHTML = "randomstring3@gmail.com";
-  document.getElementById("tobias").innerHTML = "randomstring50";
-  document.getElementById("linus").innerHTML = "randomstring70";
-  document.getElementById("linus4").innerHTML = "randomstring90";
-}, 20000);
-</script>
+    setInterval(() => {
+      i++;
+      myFunction();
+    }, 5000);
+  </script>
 </html>
-
